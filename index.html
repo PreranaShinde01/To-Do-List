@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>To-Do List</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="app">
+      <!-- Header -->
+      <header class="app-header">
+        <h1>✅ My Tasks</h1>
+        <p id="count" class="task-count">0 left</p>
+      </header>
+
+      <!-- Add task form -->
+      <form id="form" class="add-form">
+        <input
+          id="text"
+          type="text"
+          class="task-input"
+          placeholder="What needs to be done?"
+          autocomplete="off"
+          maxlength="200"
+        />
+        <button type="submit" class="btn btn-add">Add</button>
+      </form>
+
+      <!-- Filter bar -->
+      <nav class="filters" aria-label="Filter tasks">
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="active">Active</button>
+        <button class="filter-btn" data-filter="done">Done</button>
+      </nav>
+
+      <!-- Task list -->
+      <ul id="list" class="task-list" aria-label="Task list"></ul>
+
+      <!-- Empty state -->
+      <p id="empty" class="empty-state" hidden>No tasks here — add one above!</p>
+
+      <!-- Footer actions -->
+      <footer class="app-footer">
+        <button id="clear-btn" class="btn btn-clear">Clear Completed</button>
+      </footer>
+    </div>
+
+    <script src="app.js" defer></script>
+  </body>
+</html>
